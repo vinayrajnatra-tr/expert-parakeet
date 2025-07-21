@@ -1,8 +1,8 @@
 name: build-test-deploy
 
-on: Push
+on: push
 
-Jobs:
+jobs:
   build:
     runs-on: ubunt-latest
 
