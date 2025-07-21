@@ -1,0 +1,17 @@
+name: build-test-deploy
+
+on: Push
+
+Jobs:
+  build:
+    runs-on: ubunt-latest
+
+    steps:
+      - name: checkout repo
+        users: actions/checkout@v4
+      - name: use node.js
+        uses : actions actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - run: npm install
+      - run: npm run build
